@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IslandWatch - Terms of Use</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <style>
+    /* Legal pages: fixed 3-item nav with static highlights */
+    .legal-nav .nav-links {
+      flex: none;
+    }
+    .legal-nav .nav-links a {
+      flex: none;
+      padding: 8px 16px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .88rem;
+      transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+    }
+    .legal-nav .nav-links a:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    /* Active / current page: coral pink */
+    .legal-nav .nav-links a[aria-current="page"] {
+      color: #ff7f6a;
+      background: rgba(255,127,106,0.12);
+      border-color: rgba(255,127,106,0.35);
+    }
+    /* Back to site: static teal */
+    .legal-nav .nav-links a.nav-link--home {
+      color: rgb(46,196,182) !important;
+      background: rgba(46,196,182,0.12);
+      border-color: rgba(46,196,182,0.35);
+    }
+
+    /* Legal page text styling (separate from main site) */
+    .legal-page .nav {
+      background: rgba(247,249,251,0.80);
+    }
+    .legal-page .hero {
+      background: rgba(255,255,255,0.80);
+      padding: 1.4rem 1.5rem 1.2rem;
+    }
+    .legal-page .acc-item {
+      background: rgba(255,255,255,0.80);
+      border-color: rgba(255,255,255,0.80);
+    }
+    .legal-page .hero-sub {
+      color: var(--ink);
+    }
+    .legal-page .section-head p,
+    .legal-page .acc-content {
+      color: var(--ink);
+    }
+  </style>
+</head>
+
+<body class="legal-page">
+  <nav class="nav legal-nav" aria-label="Primary">
+    <a class="nav-brand" href="index.html" aria-label="IslandWatch home">
+      <img src="images/islandwatch-logo.png" alt="IslandWatch" class="nav-logo"/>
+    </a>
+    <div class="nav-links" data-collapsed="false">
+      <a href="index.html" class="nav-link nav-link--home">Back to site</a>
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="terms-of-use.html" class="nav-link" aria-current="page">Terms of Use</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <h1 class="hero-title">Terms of Use</h1>
+    <p class="hero-sub">
+      These Terms of Use (“Terms”) govern your access to and use of the IslandWatch mobile application (the “App”) and the services provided through the App (the “Services”).
+      By creating an account, installing, accessing, or using the App or Services, you agree to these Terms.
+    </p>
+  </header>
+
+  <section class="policy reveal" id="terms-of-use-content">
+    <div class="section-head">
+      <h2>Effective Date</h2>
+      <p>February 16th, 2026</p>
+      <h2 style="margin-top: 14px;">Last Updated</h2>
+      <p>February 16th, 2026</p>
+    </div>
+
+    <div class="accordion" id="terms-accordion">
+
+      <!-- Overview -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">Overview</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p><strong>Operator:</strong> IslandWatch Ltd., Bermuda (“IslandWatch”, “we”, “us”, “our”)</p>
+            <p><strong>Bermuda-only:</strong> The App and Services are intended for users located in Bermuda. IslandWatch may require or verify Bermuda location indicators (for example, Bermuda phone numbers) and may deny or disable access if the App is used outside Bermuda.</p>
+            <p><strong>Informational website:</strong> Any IslandWatch website is for informational purposes only and is not used for account creation, payments, tracking, or reporting.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">1) Definitions</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <ul>
+              <li><strong>“Account”</strong> means your IslandWatch user account.</li>
+              <li><strong>“Device”</strong> means the IslandWatch GPS tracking unit installed on a vehicle by IslandWatch.</li>
+              <li><strong>“Vehicle Profile”</strong> means the record in the App representing your vehicle and linked Device (if applicable).</li>
+              <li><strong>“Location Data”</strong> means Device-generated GPS coordinates, timestamps, movement/trip information, and related alerts/events.</li>
+              <li><strong>“Report to Police”</strong> means the in-app feature that transmits incident information to the Bermuda Police Service (BPS) portal through an encrypted API after you confirm.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">2) Eligibility and account registration</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>You must be at least 16 years old to use the Services. If you are 16 or 17, you represent that you have permission from a parent or legal guardian to use the Services and enter into these Terms, to the extent required by applicable law.</p>
+            <p>You agree to provide accurate, complete, and up-to-date information and to keep it current. You are responsible for all activity under your Account and for maintaining the confidentiality of your login credentials.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">3) What the App does</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>IslandWatch provides vehicle tracking, alerting, and recovery-support features based on a Device installed on the vehicle. Features may vary by plan, vehicle type, Device configuration, and availability of connectivity.</p>
+            <p><strong>The App may provide features such as:</strong></p>
+            <ul>
+              <li>Live location display and recent movement/trip views based on Location Data.</li>
+              <li>Historical views of Location Data (for example, day/week/month summaries) as available in the App.</li>
+              <li>Alert/event notifications and logs (for example, movement/tamper-related events, geofence entry/exit, connectivity changes, or other Device-reported events).</li>
+              <li>Geofence creation and management (where enabled).</li>
+              <li>Device status indicators (for example, connectivity status) as available.</li>
+              <li>A “Report to Police” feature to transmit a recovery report to BPS after user confirmation.</li>
+            </ul>
+            <p><strong>Not an emergency service:</strong> IslandWatch is not an emergency response service. In an emergency, contact 911/emergency services directly. IslandWatch does not guarantee response times from any third party, including BPS.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">4) Service limitations and no guarantee</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p><strong>No guarantee:</strong> IslandWatch does not guarantee theft prevention, recovery, uninterrupted operation, or perfect accuracy. Location and alerts may be delayed, unavailable, incomplete, or inaccurate due to factors outside our control, including coverage limitations, obstructions, interference, tampering, vehicle power conditions, device fault, or maintenance needs.</p>
+            <p><strong>Do not rely on the App while driving:</strong> You agree not to use the App in a manner that distracts you while operating a vehicle. You are solely responsible for compliance with road traffic and distracted-driving laws.</p>
+            <p><strong>Third-party dependencies:</strong> The Services depend on third-party networks and infrastructure (for example, wireless connectivity, hosting, mapping, and notification services). Outages or performance issues may occur due to third parties and are outside IslandWatch’s control.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">5) Required information</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>To use the Services, you must provide required information at signup, including First Name, Last Name, Contact Number, Birthday, Driver’s License Number, and vehicle details (Vehicle Name, Make, Model, Year, Color, License Plate Number). You represent that you have the right to provide this information and that it is accurate.</p>
+            <p><strong>Purpose of identity details:</strong> Birthday and Driver’s License Number are collected to support incident reporting to BPS when you choose to use Report to Police, and for account integrity and fraud prevention.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">6) Installation, Device ownership, and care</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p><strong>In-house installation only:</strong> Devices are installed only by IslandWatch technicians (or authorised IslandWatch contractors) using IslandWatch’s in-house process. You agree to cooperate with scheduling and to provide reasonable access to the vehicle for installation, inspection, maintenance, removal, or retrieval.</p>
+            <p><strong>Device remains IslandWatch property:</strong> The Device is and remains the property of IslandWatch at all times. You do not obtain ownership rights of the Device, even if you pay an upfront device and installation fee. The upfront fee covers equipment provisioning, installation labour, configuration, and onboarding, and does not transfer title.</p>
+            <p><strong>Care, tampering, and interference:</strong> You must not open, tamper with, disable, modify, reverse engineer, relocate, or interfere with the Device or the Services, or attempt to bypass security controls. You are responsible for damage or loss caused by misuse, unauthorised modifications, intentional interference, or negligent handling.</p>
+            <p><strong>Vehicle changes and sale:</strong> If you sell the vehicle, change ownership, or materially modify the vehicle in a way that affects installation, you must notify IslandWatch promptly so we can advise on removal/re-installation and account updates. IslandWatch has a built in vehicle transfer service via the App in the event the new owner wishes to sign up for a new account and service.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">7) “Report to Police” (BPS portal)</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>IslandWatch provides a Report to Police feature to transmit incident information to BPS via an encrypted API to a police portal. This feature is user-initiated and requires confirmation: transmission occurs only when you tap Report to Police and confirm.</p>
+            <p><strong>When confirmed, you authorise IslandWatch to transmit the following to BPS:</strong></p>
+            <ul>
+              <li>Vehicle information: Vehicle Name, Make, Model, Year, Color, License Plate Number.</li>
+              <li>Identity/contact information: First Name, Last Name, Contact Number, Birthday, Driver’s License Number.</li>
+              <li>The vehicle’s live location (and relevant tracking context needed to support the report).</li>
+            </ul>
+            <p><strong>No separate stolen marking:</strong> In this iteration, the only theft/incident reporting mechanism is Report to Police. After a successful submission, the App may display a “Stolen” indicator on the vehicle tab to reflect that a report was filed via the App.</p>
+            <p><strong>Misuse prohibited:</strong> You must not submit false, misleading, or abusive reports. Misuse may result in immediate suspension or termination and may be reported to authorities. IslandWatch is not responsible for BPS actions, response times, or recovery outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">8) Acceptable use and prohibited conduct</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>You agree you will use the App and Services only for lawful purposes and in accordance with these Terms. You must not:</p>
+            <ul>
+              <li>Violate Bermuda law or any applicable regulation, including privacy, surveillance, or traffic laws.</li>
+              <li>Use the Services to track a vehicle you do not own or do not have lawful authority to track.</li>
+              <li>Use the Services to harass, stalk, threaten, or unlawfully monitor any person.</li>
+              <li>Share your Account credentials or permit others to access your Account without your authorization.</li>
+              <li>Attempt unauthorised access to systems, data, or accounts, or probe, scan, or test the vulnerability of any system.</li>
+              <li>Introduce malware, interfere with, disrupt, or degrade the Services, servers, or networks.</li>
+              <li>Reverse engineer, decompile, disassemble, copy, modify, or create derivative works of the App or Services except where permitted by law.</li>
+              <li>Circumvent security controls, attempt to spoof location, or manipulate Device events/alerts.</li>
+              <li>Use the Services in a way that creates unreasonable load, automated scraping, or bulk extraction of data.</li>
+              <li>Remove, obscure, or alter proprietary notices or branding.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">9) Fees, payments, subscriptions, and cancellation</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p><strong>Fees:</strong> You may be required to pay (i) an upfront fee for the Device and installation, and (ii) a recurring subscription fee for ongoing service access. All fees and taxes will be shown at purchase/checkout or otherwise communicated to you.</p>
+            <p><strong>Payment processing:</strong> Payments are processed through Authorize.net and related payment partners. You authorise recurring charges for subscription fees.</p>
+            <p><strong>Monthly term:</strong> Subscriptions are billed monthly (unless otherwise stated). You may cancel at any time. Service will continue through the end of the then-current billing month (the “Cancellation Effective Date”) and will not renew for the following month.</p>
+            <p><strong>Refunds:</strong> Except where required by law, fees are non-refundable. This includes the upfront Device/installation fee and any subscription fees already charged for a billing period.</p>
+            <p><strong>Non-payment:</strong> If payment fails or is overdue, IslandWatch may suspend or terminate Services, disable access to the App or tracking features, and retrieve the Device. You remain responsible for unpaid amounts and applicable fees described below.</p>
+            <p><strong>Annual plans:</strong> At this time, IslandWatch does not offer annual subscription commitments. If annual plans are introduced, additional terms (including early termination rules) will apply and will be disclosed at the time of purchase.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">10) Device return, Retrieval, and Pause (Standby) options</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>The Device remains the property of IslandWatch at all times. You do not obtain ownership rights in the Device.</p>
+
+            <p><strong>A. Pause (Standby) option — Device remains installed</strong></p>
+            <p>Instead of cancelling, you may elect to Pause your subscription (“Standby”) for $5 BMD per month.</p>
+            <ul>
+              <li>The Device may remain installed on the vehicle.</li>
+              <li>Your subscription is not considered “active” for full Services. Certain features may be limited or unavailable during Standby at IslandWatch’s discretion.</li>
+              <li>You remain responsible for safeguarding the Device and ensuring it is not tampered with, removed, transferred to another vehicle, or sold with the vehicle.</li>
+              <li>If you sell or transfer the vehicle, you must notify IslandWatch in advance so the Device can be removed or transferred to the new owner of the vehicle if so desired.</li>
+            </ul>
+            <p><strong>Non-payment of Standby:</strong> If the Standby fee is not paid when due, IslandWatch may suspend access and may treat the account as cancelled/terminated, triggering the Device return and retrieval process below.</p>
+
+            <p><strong>B. Cancellation/termination — Device must be returned or made available for removal</strong></p>
+            <p>If your subscription is cancelled, terminated, or suspended for non-payment, you must allow IslandWatch to remove or retrieve the Device.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">11) Privacy</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>Our Privacy Policy explains how we collect and use personal information and forms part of these Terms. Location history is retained for up to 1 year, as described in the Privacy Policy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">12) Intellectual property</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>The App, Services, and all related content and technology are owned by IslandWatch or its licensors and are protected by law. You receive a limited, non-exclusive, non-transferable, revocable licence to use the App for lawful personal use in accordance with these Terms.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">13) Suspension and termination</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>We may suspend or terminate your access to the App or Services immediately if you violate these Terms, we suspect fraud/misuse, you submit false police reports, or to protect the Service or comply with law. Upon termination, Device retrieval obligations apply (see Section 10).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">14) Disclaimers</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>To the maximum extent permitted by law, the App and Services are provided “as is” and “as available.” We disclaim all warranties, express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+            <p>We do not warrant that tracking will be uninterrupted, timely, secure, or error-free, or that Location Data will be exact or continuously available.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">15) Limitation of liability</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>To the maximum extent permitted by law, IslandWatch will not be liable for indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenue, goodwill, data, or business opportunity.</p>
+            <p>Without limiting the above, IslandWatch will not be liable for losses arising from theft, recovery failures, inaccurate/delayed Location Data, device tampering, third-party outages, failure of wireless connectivity, or your failure to maintain your vehicle/device in a condition that supports connectivity and operation.</p>
+            <p><strong>Liability cap:</strong> To the maximum extent permitted by law, IslandWatch’s total liability for any claim arising out of or relating to the App or Services will not exceed the total subscription fees paid by you to IslandWatch in the six (6) months preceding the event giving rise to the claim.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">16) Indemnity</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>You agree to indemnify and hold harmless IslandWatch and its officers, directors, employees, contractors, and agents from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or related to your use of the Services, your violation of these Terms, unlawful tracking, or false/misleading police reports.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">17) Force majeure</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>IslandWatch will not be responsible for delays or failures to perform resulting from causes beyond its reasonable control, including natural disasters, acts of government, strikes, network or infrastructure outages, or other force majeure events.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">18) Changes to the Services or Terms</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>We may modify the Services or these Terms from time to time. If changes are material, we will provide notice through the App. Continued use of the Services after changes take effect constitutes acceptance of the updated Terms.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">19) Governing law and disputes</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p>These Terms are governed by the laws of Bermuda, without regard to conflict-of-law principles. You agree that disputes arising out of or relating to these Terms or the Services will be brought in the courts of Bermuda, unless IslandWatch elects another lawful method.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">20) Miscellaneous</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <ul>
+              <li><strong>Severability:</strong> If any provision of these Terms is held invalid or unenforceable, the remaining provisions will remain in effect.</li>
+              <li><strong>No waiver:</strong> Our failure to enforce any right or provision is not a waiver of that right or provision.</li>
+              <li><strong>Assignment:</strong> You may not assign or transfer these Terms without IslandWatch’s prior written consent. IslandWatch may assign these Terms in connection with a corporate reorganisation, merger, acquisition, or sale of assets.</li>
+              <li><strong>Entire agreement:</strong> These Terms and the Privacy Policy constitute the entire agreement between you and IslandWatch regarding the App and Services.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="acc-item">
+        <button class="acc-trigger" type="button" aria-expanded="false">
+          <span class="acc-title">21) Contact</span>
+          <span class="acc-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div class="acc-panel" role="region">
+          <div class="acc-content">
+            <p><strong>Organisation:</strong> IslandWatch Ltd.</p>
+            <p><strong>Address:</strong> Weldon House, 7 Victoria Street, Hamilton HM11 Bermuda</p>
+            <p><strong>Email:</strong> <a href="mailto:support@islandwatch.bm">support@islandwatch.bm</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> IslandWatch Ltd. All rights reserved.
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

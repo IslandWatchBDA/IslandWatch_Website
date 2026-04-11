@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IslandWatch</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-brand" href="#top" aria-label="IslandWatch home">
+      <img src="images/islandwatch-logo.png" alt="IslandWatch" class="nav-logo"/>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="nav-links" data-collapsed="true">
+      <a href="#why">Why</a>
+      <a href="#features">Features</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#score">Safe Score</a>
+      <a href="#how">How It Works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#plans">Plans</a>
+      <a href="#faq">FAQ</a>
+      <a href="#signup" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <img src="images/islandwatch-logo.png" alt="IslandWatch Logo" class="logo"/>
+    <h1 class="hero-title">Protect Your Bike. Ride Smarter.</h1>
+    <p class="hero-sub">Built in Bermuda for riders who want theft protection today and better riding & driving insights over time.</p>
+
+    <div class="hero-actions">
+      <a href="#signup" class="cta-btn">Join the Waitlist</a>
+      <a href="#pilot" class="cta-btn ghost">Founding Riders & Drivers</a>
+    </div>
+
+    <div class="hero-badges" aria-label="Key benefits">
+      <span class="badge"><i class="fa-solid fa-bell"></i> Smart alerts</span>
+      <span class="badge"><i class="fa-solid fa-location-dot"></i> Live tracking</span>
+      <span class="badge"><i class="fa-solid fa-chart-line"></i> Driving insights</span>
+      <span class="badge"><i class="fa-solid fa-wrench"></i> In‑house installs</span>
+    </div>
+  </header>
+
+  <!-- WHY -->
+  <section class="why reveal" id="why">
+    <div class="section-head">
+      <h2>Why IslandWatch Was Made</h2>
+      <p>Bike theft is the first problem we’re solving. But the same technology unlocks safer riding & driving, smarter fleets, and better visibility across mobile assets.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <h3><i class="fa-solid fa-lock"></i> Theft comes first</h3>
+        <p>Know when something’s wrong, see where your bike is, and act fast with a clear theft‑to‑recovery flow.</p>
+      </div>
+      <div class="why-card">
+        <h3><i class="fa-solid fa-helmet-safety"></i> Safer Drivers</h3>
+        <p>Turn riding & driving behaviour into simple insights — especially helpful for new riders starting at <strong>16</strong>.</p>
+      </div>
+      <div class="why-card">
+        <h3><i class="fa-solid fa-building"></i> Smarter businesses</h3>
+        <p>Company vehicles and fleets get live visibility, route history, and accountability without the headaches.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES: CORE -->
+  <section class="story reveal" id="features">
+    <div class="section-head">
+      <h2>Core Features</h2>
+      <p>Simple tools that protect your bike and give you meaningful riding & driving insights — without information overload.</p>
+    </div>
+
+    <div class="story-grid">
+      <figure class="card">
+        <div class="media">
+          <img src="images/active-tracking.png" alt="Bike parked with active tracking pin" loading="lazy">
+        </div>
+        <figcaption><strong>Always On.</strong> See your bike’s live location when you need it.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="media">
+          <img src="images/bike.png" class="on-the-move-shot" alt="Rider on a motorbike being tracked" loading="lazy">
+        </div>
+        <figcaption><strong>On the move.</strong> Smooth, real‑time driving behaviour updates while you ride.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="media">
+          <img src="images/theft-alert.png" class="instant-alerts-shot" alt="Phone showing theft alert notification" loading="lazy">
+        </div>
+        <figcaption><strong>Instant alerts.</strong> Tamper & movement notifications sent to your phone.</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="media">
+          <img src="images/report-theft.png" class="quick-action-shot" alt="In‑app share button" loading="lazy">
+        </div>
+        <figcaption><strong>Quick action.</strong> Share a secure live‑location link when it matters.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- USE CASES (INTERACTIVE) -->
+  <section class="use-cases reveal" id="use-cases">
+    <div class="section-head">
+      <h2>Built for Bike Theft — Useful for Much More</h2>
+      <p>Select a use case to see how IslandWatch fits different riders, families, and businesses.</p>
+    </div>
+
+    <div class="usecase" data-usecase>
+      <div class="usecase-tabs" role="tablist" aria-label="IslandWatch use cases">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="theft">Bike Theft</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="new">New Riders (16+)</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="company">Company Vehicles</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="assets">Other Assets</button>
+      </div>
+
+      <div class="usecase-panels">
+        <div class="panel is-active" role="tabpanel" data-panel="theft">
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <h3>Know fast. Act faster.</h3>
+              <ul>
+                <li>Movement & tamper alerts when your bike is parked</li>
+                <li>Live location + trip history for quicker recovery</li>
+                <li>One‑tap sharing of a secure live‑location link</li>
+              </ul>
+            </div>
+            <div class="panel-media">
+              <img src="images/theft-alert.png" class="theft-shot" alt="Theft alert on phone" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" data-panel="new">
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <h3>Support new riders starting at 16.</h3>
+              <ul>
+                <li>See riding & driving patterns in a simple Safe Driving Score</li>
+                <li>Spot risky habits early (speeding, harsh braking/accel)</li>
+                <li>Use insights for coaching — not confrontation</li>
+              </ul>
+              <p class="note">Designed for riders aged <strong>16+</strong> and families who want extra peace of mind.</p>
+            </div>
+            <div class="panel-media">
+              <img src="images/bike2.png" class="new-riders-shot" alt="Rider on a motorbike" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" data-panel="company">
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <h3>Company vehicles without the chaos.</h3>
+              <ul>
+                <li>Live visibility for deliveries, service calls, or field work</li>
+                <li>Geofences for depots, worksites, and restricted areas</li>
+                <li>Usage history to support accountability and maintenance</li>
+              </ul>
+            </div>
+            <div class="panel-media">
+              <img src="images/fleet.png" class="fleet-shot" alt="Manager tracking a fleet" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" data-panel="assets">
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <h3>Beyond bikes: protect what moves.</h3>
+              <ul>
+                <li>Boats, trailers, and mobile equipment</li>
+                <li>Storage monitoring with alerts and location history</li>
+                <li>One platform as you expand your needs</li>
+              </ul>
+            </div>
+            <div class="panel-media">
+              <img src="images/boat.png" class="boat-shot" alt="Boat with tracking pin" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFE DRIVING SCORE -->
+  <section class="score reveal" id="score">
+    <div class="section-head">
+      <h2>Safe Driving Score</h2>
+      <p>A simple score and weekly insights that help riders improve habits over time — built for real Bermudian roads.</p>
+    </div>
+
+    <div class="score-grid">
+      <!-- Top container: metrics + preview image -->
+      <div class="score-card">
+        <h3>What it looks at</h3>
+        <div class="pills" aria-label="Score components">
+          <button class="pill is-active" type="button" data-metric="speeding">Speeding events</button>
+          <button class="pill" type="button" data-metric="braking">Harsh braking</button>
+          <button class="pill" type="button" data-metric="accel">Harsh acceleration</button>
+          <button class="pill" type="button" data-metric="collision">Collision signals</button>
+          <button class="pill" type="button" data-metric="night">Night riding & driving patterns</button>
+        </div>
+
+        <div class="metric" aria-live="polite">
+          <h4 class="metric-title">Speeding events</h4>
+          <p class="metric-text">Highlights when you exceed a set speed threshold. Useful for spotting repeat habits and improving consistency over time.</p>
+        </div>
+
+      </div>
+      <div class="score-visual">
+        <img src="images/dashboard.png" class="dashboard-shot" alt="Analytics dashboard" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Callout container below the top block -->
+    <div class="score-callout">
+      <p>We keep this simple on purpose: you get clear trends and actionable feedback — not a confusing data dump.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="hiw reveal" id="how">
+    <div class="section-head">
+      <h2>How It Works</h2>
+      <p>From signup to installs — simple, supported, and built for Bermuda.</p>
+    </div>
+
+    <ol class="steps" aria-label="How IslandWatch works">
+      <li><i class="fa-solid fa-clipboard-check"></i> Join the waitlist</li>
+      <li><i class="fa-solid fa-calendar-check"></i> Book an in‑house install</li>
+      <li><i class="fa-solid fa-credit-card"></i> Select your plan</li>
+      <li><i class="fa-solid fa-bell"></i> Get notified when something’s off</li>
+      <li><i class="fa-solid fa-chart-line"></i> Track rides & improve your score</li>
+    </ol>
+  </section>
+
+  <!-- PILOT -->
+  <section class="pilot reveal" id="pilot">
+    <div class="section-head">
+      <h2>Founding Riders & Drivers Program</h2>
+      <p>We’re onboarding a small pilot group of 25 persons to perfect the experience in real Bermudian conditions.</p>
+    </div>
+
+    <div class="pilot-grid">
+      <div class="pilot-card">
+        <h3>What you get</h3>
+        <div class="perk-grid" aria-label="Founding Riders & Drivers benefits">
+          <div class="perk">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+              <h4>Priority support</h4>
+              <p>Direct access while we dial in the experience for Bermuda.</p>
+            </div>
+          </div>
+          <div class="perk">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <div>
+              <h4>Priority installs</h4>
+              <p>Fast scheduling and a clean, consistent in‑house setup.</p>
+            </div>
+          </div>
+          <div class="perk">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div>
+              <h4>Early features</h4>
+              <p>Be first to test improvements and new tools as they ship.</p>
+            </div>
+          </div>
+          <div class="perk">
+            <i class="fa-solid fa-bullhorn"></i>
+            <div>
+              <h4>Have a voice</h4>
+              <p>Your feedback directly shapes what we build next.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pilot-card">
+        <h3>What we ask</h3>
+        <div class="perk-grid" aria-label="Founding Riders & Drivers expectations">
+          <div class="perk alt">
+            <i class="fa-solid fa-calendar-week"></i>
+            <div>
+              <h4>4 weeks of normal use</h4>
+              <p>Ride as you normally would — no special routines.</p>
+            </div>
+          </div>
+          <div class="perk alt">
+            <i class="fa-solid fa-stopwatch"></i>
+            <div>
+              <h4>2‑minute weekly check‑in</h4>
+              <p>A quick pulse so we know what’s working and what isn’t.</p>
+            </div>
+          </div>
+          <div class="perk alt">
+            <i class="fa-solid fa-sliders"></i>
+            <div>
+              <h4>Tune alerts together</h4>
+              <p>Help reduce false alarms and improve signal quality.</p>
+            </div>
+          </div>
+          <div class="perk alt">
+            <i class="fa-solid fa-star"></i>
+            <div>
+              <h4>Optional testimonial</h4>
+              <p>If you love it, a short quote helps us launch the right way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center cta-block">
+      <a href="#signup" class="cta-btn">Apply / Join Waitlist</a>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="roadmap reveal" id="roadmap">
+    <div class="section-head">
+      <h2>Where We’re Going</h2>
+      <p>A clear path from theft protection to broader safety insights and fleet capability — built step‑by‑step in Bermuda.</p>
+    </div>
+
+    <div class="timeline" aria-label="Product roadmap">
+      <div class="t-item">
+        <div class="t-card">
+          <h3 class="t-title"><i class="fa-solid fa-rocket"></i> Launch</h3>
+          <p>Lock in a smooth install-to-use experience and deliver reliable theft protection from day one.</p>
+          <div class="t-tags">
+            <span class="tag">In-house installs</span>
+            <span class="tag">Alerts + geofences</span>
+            <span class="tag">Live tracking</span>
+            <span class="tag">Fast local support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-card">
+          <h3 class="t-title"><i class="fa-solid fa-lightbulb"></i> Insights</h3>
+          <p>Make Safe Score more useful with clearer trends, smarter events, and weekly summaries drivers actually read.</p>
+          <div class="t-tags">
+            <span class="tag">Event tuning</span>
+            <span class="tag">Weekly summaries</span>
+            <span class="tag">Better alert control</span>
+            <span class="tag">New rider monitoring (16+)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-card">
+          <h3 class="t-title"><i class="fa-solid fa-expand"></i> Expansion</h3>
+          <p>Bring IslandWatch to company vehicles and additional assets with fleet tools and management features.</p>
+          <div class="t-tags">
+            <span class="tag">Fleet dashboard</span>
+            <span class="tag">Driver behavior trends</span>
+            <span class="tag">Admin controls</span>
+            <span class="tag">More asset types</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans reveal" id="plans">
+    <div class="section-head">
+      <h2>Plans & Pricing</h2>
+      <p>One simple plan for launch — <strong>all features included</strong>. Fleet is coming next.</p>
+      <p class="muted">Waitlist members get first access and founding offers.</p>
+    </div>
+
+    <div class="pricing">
+      <div class="price-card highlight">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>IslandWatch</h3>
+        <p class="price-sub">Monthly subscription (per vehicle)</p>
+        <ul>
+          <li>Live tracking + trip history</li>
+          <li>Smart alerts (movement, tamper, zones)</li>
+          <li>Up to 6 geofences</li>
+          <li>Safe Driving Score + insights</li>
+          <li>In‑house install & onboarding support</li>
+        </ul>
+        <p class="note">Device + install pricing is provided during onboarding.</p>
+      </div>
+
+      <div class="price-card coming-soon" aria-label="Fleet plan coming soon">
+        <i class="fa-solid fa-building"></i>
+        <h3>Fleet</h3>
+        <p class="price-sub">Coming soon</p>
+        <ul>
+          <li>Multi‑vehicle dashboard</li>
+          <li>Custom alerts & roles</li>
+          <li>Exports & analytics</li>
+          <li>Company vehicles & operations</li>
+        </ul>
+        <a class="mini-cta" href="#signup">Join the waitlist for Fleet updates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal" id="faq">
+    <div class="section-head">
+      <h2>FAQ</h2>
+      <p>Clear answers. No fluff.</p>
+    </div>
+
+    <div class="faq-list" aria-label="Frequently asked questions">
+      <div class="faq-qa">
+        <h3>What is IslandWatch?</h3>
+        <p>IslandWatch is a Bermuda‑built tracking and alerting service that helps protect your bike from theft, while also turning ride data into practical insights like a Safe Driving Score.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>Is this only for motorcycles?</h3>
+        <p>Bike theft is our launch focus, but the same platform supports other use cases such as new riders (16+), company vehicles, and select mobile assets.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>Do you install the device?</h3>
+        <p>Yes — installs are done in‑house so setup is consistent and supported from day one. After you join the waitlist, we’ll contact you to schedule.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>What alerts will I receive?</h3>
+        <p>You can receive alerts for things like movement/tamper security alerts, zone entry/exit (geofences), collisions and other unusual activity. During the pilot we tune alerts to reduce false alarms in Bermuda conditions.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>How does the Safe Driving Score work?</h3>
+        <p>At a high level, it summarizes driving patterns (like speeding events and harsh braking/acceleration) into an easy score and trends. It’s built to help riders improve over time — not overwhelm you with charts.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>Can parents use this for new riders starting at 16?</h3>
+        <p>Yes. The Safe Driving Score and ride history can help families coach safer habits early. We focus on practical insights and peace of mind.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>What does the monthly plan include?</h3>
+        <p>The launch plan includes <strong>all features</strong> — live tracking, alerts, geofences, and the Safe Driving Score. Device and install pricing is provided during onboarding.</p>
+      </div>
+
+      <div class="faq-qa">
+        <h3>Do you share my data with anyone?</h3>
+        <p>Your data is used to provide the service. Any sharing (like a live‑location link) is initiated by you. Partner programs may come later, but nothing is shared without clear user consent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="signup" id="signup">
+    <h2>Join the Waitlist</h2>
+    <p>Get launch updates, pilot availability, and early offers. We’ll keep this list tight and spam‑free.</p>
+
+    <form class="form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="waitlist" />
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-grid">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required class="input" placeholder="Your name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required class="input" placeholder="you@email.com" />
+        </label>
+        <label>
+          <span>Parish</span>
+          <select name="parish" class="input" required>
+            <option value="">Select…</option>
+            <option>Devonshire</option>
+            <option>Hamilton</option>
+            <option>Paget</option>
+            <option>Pembroke</option>
+            <option>Sandys</option>
+            <option>Smith’s</option>
+            <option>Southampton</option>
+            <option>St. George’s</option>
+            <option>Warwick</option>
+          </select>
+        </label>
+        <label>
+          <span>Main interest</span>
+          <select name="interest" class="input" required>
+            <option value="">Select…</option>
+            <option>Bike theft protection</option>
+            <option>Safe Driving Score</option>
+            <option>Company vehicles / fleet</option>
+            <option>All of the above</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <label class="check">
+          <input type="checkbox" name="founding_riders" value="yes" />
+          <span>I’m interested in the Founding Riders & Drivers pilot</span>
+        </label>
+        <button type="submit" class="btn">Join Waitlist</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> IslandWatch Ltd. All rights reserved.
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms-of-use.html">Terms of Use</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
