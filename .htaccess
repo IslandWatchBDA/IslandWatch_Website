@@ -1,0 +1,24 @@
+# Media streaming — for Apache / LiteSpeed (cPanel) deploys.
+# Netlify ignores this file and already streams with byte-range support.
+
+# Correct media types so the browser treats these as streamable video/audio.
+AddType video/mp4   .mp4 .m4v
+AddType video/webm  .webm
+AddType audio/mp4   .m4a
+AddType audio/mpeg  .mp3
+
+# Never compress video/audio. gzip on an .mp4 breaks HTTP range requests, which
+# forces Safari to download the whole file before it can play (black screen +
+# spinner). Leaving it uncompressed lets Safari stream and start instantly.
+<IfModule mod_deflate.c>
+  SetEnvIfNoCase Request_URI "\.(mp4|m4v|webm|m4a|mp3|mov)$" no-gzip dont-vary
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Advertise byte-range support explicitly so Safari streams instead of buffering.
+  <FilesMatch "\.(mp4|m4v|webm|m4a|mp3|mov)$">
+    Header set Accept-Ranges bytes
+    # Assets are cache-busted via ?v=, so they can be cached aggressively.
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
