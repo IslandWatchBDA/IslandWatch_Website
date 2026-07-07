@@ -1,0 +1,83 @@
+# IslandWatch website — Netlify config
+# Clean URLs (no .html), canonical enforcement.
+# Slugs match the existing live site: /privacy-policy and /terms-of-use.
+# Netlify "Pretty URLs" does most of this by default; these rules make it
+# explicit so behaviour survives that setting being toggled off.
+
+[build]
+  publish = "."
+
+# Cache the (cache-busted via ?v=) videos hard so repeat opens are instant.
+# Netlify serves these with byte-range support automatically, so Safari streams
+# rather than buffering the whole file.
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# --- Strip .html -> clean URL (301, canonical) ---
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-use.html"
+  to = "/terms-of-use"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data-requests.html"
+  to = "/data-requests"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thanks.html"
+  to = "/thanks"
+  status = 301
+  force = true
+
+# --- Serve clean URL from the underlying file (200 rewrite, no redirect loop) ---
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-of-use"
+  to = "/terms-of-use.html"
+  status = 200
+
+[[redirects]]
+  from = "/data-requests"
+  to = "/data-requests.html"
+  status = 200
+
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks.html"
+  status = 200
+
+# NOTE for launch: robots.txt currently blocks all crawlers (Disallow: /) for the
+# approval/demo build. Replace it on the production deploy with an allow rule and
+# add:  Sitemap: https://www.islandwatch.bm/sitemap.xml
