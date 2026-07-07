@@ -82,8 +82,8 @@ button{font-family:inherit;}
 .btn:active{transform:translateY(0) scale(.99);}
 .btn-lg{padding:16px 26px; font-size:16px;}
 .btn-block{width:100%;}
-.btn-primary{background:var(--pink); color:#fff; box-shadow:var(--shadow-pink);}
-.btn-primary:hover{transform:translateY(-2px); background:#d81558; box-shadow:0 14px 30px -6px rgba(233,30,99,.55);}
+.btn-primary{background:#d81558; color:#fff; box-shadow:var(--shadow-pink);}
+.btn-primary:hover{transform:translateY(-2px); background:var(--pink-dark); box-shadow:0 14px 30px -6px rgba(233,30,99,.55);}
 .btn-ghost{background:#fff; --b:var(--border); color:var(--navy);}
 .btn-ghost:hover{transform:translateY(-2px); --b:#cbd2db; box-shadow:0 10px 24px -10px rgba(15,23,42,.25);}
 .btn-navy{background:var(--navy); color:#fff;}
