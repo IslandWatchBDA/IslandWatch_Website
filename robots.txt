@@ -1,2 +1,29 @@
+# IslandWatch — production robots
+# Allow all search + AI crawlers, point them to the sitemap.
+
 User-agent: *
-Disallow: /
+Allow: /
+
+# Welcome AI / answer engines (generative search)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.islandwatch.bm/sitemap.xml

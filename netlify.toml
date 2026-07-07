@@ -78,6 +78,5 @@
   to = "/thanks.html"
   status = 200
 
-# NOTE for launch: robots.txt currently blocks all crawlers (Disallow: /) for the
-# approval/demo build. Replace it on the production deploy with an allow rule and
-# add:  Sitemap: https://www.islandwatch.bm/sitemap.xml
+# robots.txt now allows all crawlers (search + AI) and points to the sitemap —
+# the old demo-build Disallow: / block has been removed.

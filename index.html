@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://www.islandwatch.bm/#org",
         "name": "IslandWatch",
         "legalName": "IslandWatch Ltd.",
@@ -73,10 +73,44 @@
         "name": "IslandWatch",
         "publisher": { "@id": "https://www.islandwatch.bm/#org" },
         "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.islandwatch.bm/#faq",
+        "isPartOf": { "@id": "https://www.islandwatch.bm/#website" },
+        "mainEntity": [
+          { "@type": "Question", "name": "What is IslandWatch?", "acceptedAnswer": { "@type": "Answer", "text": "IslandWatch is a Bermuda-built tracking and alerting service. It protects your vehicle from theft and turns ride data into practical insights like a Safe Driving Score." } },
+          { "@type": "Question", "name": "Is this only for motorcycles?", "acceptedAnswer": { "@type": "Answer", "text": "No. We're starting with bikes, but the same platform works for cars, company vehicles, and other mobile assets." } },
+          { "@type": "Question", "name": "Do you install the device?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our in-house Bermuda team handles a clean, tamper-resistant install — it takes about an hour." } },
+          { "@type": "Question", "name": "What alerts will I receive?", "acceptedAnswer": { "@type": "Answer", "text": "Tamper and movement alerts when your vehicle is parked, plus geofence alerts and theft notifications sent straight to your phone." } },
+          { "@type": "Question", "name": "How does the Safe Driving Score work?", "acceptedAnswer": { "@type": "Answer", "text": "We turn real ride data — speeding, harsh acceleration, harsh braking, and collision detection — into one weekly score with plain-language trends." } },
+          { "@type": "Question", "name": "Can parents use this for new riders starting at 16?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. It's built to help new riders build good habits, with insights that give parents peace of mind." } },
+          { "@type": "Question", "name": "What does the monthly plan include?", "acceptedAnswer": { "@type": "Answer", "text": "Live tracking and trip history, tamper and geofence alerts, the weekly Safe Driving Score, priority install, and direct support." } },
+          { "@type": "Question", "name": "Do you share my data with anyone?", "acceptedAnswer": { "@type": "Answer", "text": "Only when you choose to. Sharing a live-location link — including with the Bermuda Police Service during a theft — is always initiated by you." } },
+          { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Personal is $25 a month plus a one-time $275 setup, with the device and install included. Fleet pricing is custom — book a consultation and we'll tailor it to your vehicles." } },
+          { "@type": "Question", "name": "What happens if my vehicle is stolen?", "acceptedAnswer": { "@type": "Answer", "text": "You confirm the theft in the app and it goes straight to the Bermuda Police Service portal. They receive a secure link to your vehicle's live location while the case is open — you can revoke that access at any time, and it closes automatically once the case is resolved." } },
+          { "@type": "Question", "name": "Can I track more than one vehicle?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can add more than one vehicle to your account, and businesses running a fleet get a multi-vehicle dashboard with geofences, trip history, and per-driver scoring." } },
+          { "@type": "Question", "name": "Can the device be removed?", "acceptedAnswer": { "@type": "Answer", "text": "What stops a thief removing the device? Tamper alert fires immediately, hardwired install, hidden placement. Can I remove the device if I cancel? We remove it for you, 10 days to schedule, or pause at $5/month." } },
+          { "@type": "Question", "name": "Is my data private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your location data stays on our servers and is used only to provide the service. Nothing is shared with any third party unless you opt in or request it. You can delete your account at any time." } }
+        ]
       }
     ]
   }
   </script>
+
+  <!--
+    Google Analytics 4 — staged, not live.
+    Replace G-XXXXXXXXXX with the real Measurement ID from Alex's GA4 property,
+    then uncomment this block to turn tracking on.
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
