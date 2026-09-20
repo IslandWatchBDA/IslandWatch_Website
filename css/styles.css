@@ -482,6 +482,10 @@ button{font-family:inherit;}
 .mini-map__pin--green{background:var(--green); right:62px; top:54px;}
 .mini-map__pin--pink{background:var(--pink); left:90px; bottom:30px;}
 
+/* ---------- Geofence ---------- */
+.geofence-image {width: 100%; margin-top: 24px; overflow: hidden; border-radius: 16px;}
+.geofence-image img { display: block; width: 100%; height: auto;}
+
 /* ---------- Roadmap phases ---------- */
 .phase{background:var(--ink); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:14px; align-items:flex-start;}
 .phase h3{color:#fff; font-size:20px; font-weight:700;}
