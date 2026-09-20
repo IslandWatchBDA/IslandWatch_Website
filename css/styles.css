@@ -255,10 +255,9 @@ button{font-family:inherit;}
 
 /* ---------- Score block (features) ---------- */
 .score-block{
-  margin-top:56px; background:var(--navy); border-radius:var(--radius-lg);
-  padding:56px; display:flex; gap:48px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+  margin-top:56px; background:var(--navy); border-radius:var(--radius-lg); padding:56px; display:flex; gap:30px; align-items:center; justify-content:space-between; flex-wrap:wrap; max-width:900px; margin-left:auto; margin-right:auto;
 }
-.score-block__copy{flex:0 1 480px; max-width:480px; display:flex; flex-direction:column; gap:16px; align-items:flex-start;}
+.score-block__copy{flex:0 1 430px; max-width:480px; display:flex; flex-direction:column; gap:16px; align-items:flex-start;}
 .score-block__title{color:#fff; font-size:clamp(1.5rem, 4vw, 32px); font-weight:700; line-height:1.15;}
 .score-block__desc{color:var(--muted-3); font-size:15px; line-height:1.5;}
 .chips{display:flex; flex-wrap:wrap; gap:8px;}
