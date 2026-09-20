@@ -230,7 +230,7 @@ button{font-family:inherit;}
 /* ---------- Hero ---------- */
 .hero{position:relative; min-height:650px; color:#fff; overflow:hidden; background:var(--ink); padding-block:158px 56px;}
 /* Taller than the hero so the JS parallax shift never reveals an edge. */
-.hero__bg{position:absolute; left:0; right:0; top:-20%; height:140%; background:url("../images/hero-bg.webp?v=20260609") center 58% / cover no-repeat; will-change:transform;}
+.hero__bg{position:absolute; left:0; right:0; top:-20%; height:140%; background:url("../images/hero-bg.webp?v=20260609") center bottom / cover no-repeat; will-change:transform;}
 .hero__scrim{position:absolute; inset:0; background:linear-gradient(to top, rgba(3,8,26,.80) 0%, rgba(3,8,26,.58) 45%, rgba(3,8,26,.30) 72%, rgba(3,8,26,.08) 100%);}
 .hero__wrap{position:relative; z-index:2;}
 .hero__inner{width:100%; max-width:760px; min-width:0; display:flex; flex-direction:column; gap:18px;}
