@@ -441,8 +441,8 @@ button{font-family:inherit;}
 /* ---------- Split sections (police / fleet) ---------- */
 .split{display:flex; gap:80px; align-items:center; justify-content:space-between;}
 .split__copy{flex:1 1 480px; display:flex; flex-direction:column; gap:20px; align-items:flex-start;}
-.split__media{flex:1 1 440px; background:#fff; border-radius:20px; padding:22px; box-shadow:var(--shadow-lg);}
-.split__media img{border-radius:12px; width:50%; display:block;}
+.split__media{flex:1 1 440px; background:#fff; border-radius:20px; padding:22px; box-shadow:var(--shadow-lg); overflow:hidden; height:260px;}
+.split__media img{border-radius:12px; width:100%; display:block;}
 .section--split .split__media{border-radius:24px;}
 .section--split .split__copy{gap:24px;}
 .timeline{display:flex; flex-direction:column; gap:18px; margin-top:4px;}
