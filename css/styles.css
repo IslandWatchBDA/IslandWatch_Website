@@ -485,6 +485,9 @@ button{font-family:inherit;}
 /* ---------- Geofence ---------- */
 .geofence-image {width: 100%; margin-top: 24px; overflow: hidden; border-radius: 16px;}
 .geofence-image img { display: block; width: 100%; height: auto;}
+.card__top-left {display: flex; align-items: center; gap: 12px;}
+.card__top-left h3 { margin: 0;}
+
 
 /* ---------- Roadmap phases ---------- */
 .phase{background:var(--ink); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:14px; align-items:flex-start;}
