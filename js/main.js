@@ -460,3 +460,120 @@
     });
   })();
 })();
+
+/* ============================================================
+   Safe Driving Score carousel
+   ============================================================ */
+
+document.querySelectorAll('.score-carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.score-carousel__track');
+  const slides = Array.from(
+    carousel.querySelectorAll('.score-carousel__slide')
+  );
+  const dots = Array.from(
+    carousel.querySelectorAll('.score-carousel__dot')
+  );
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function showSlide(index) {
+    // Wrap around
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+
+    currentIndex = index;
+
+    // Move carousel
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Update navigation dots
+    dots.forEach((dot, i) => {
+      const active = i === currentIndex;
+
+      dot.classList.toggle('is-active', active);
+
+      if (active) {
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+
+    autoPlayTimer = setInterval(() => {
+      nextSlide();
+    }, 4500);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+
+      // Restart timer so it doesn't immediately
+      // change after the user clicks a dot.
+      startAutoPlay();
+    });
+  });
+
+  // Pause while mouse is over carousel
+  carousel.addEventListener('mouseenter', stopAutoPlay);
+  carousel.addEventListener('mouseleave', startAutoPlay);
+
+  // Pause while keyboard focus is inside carousel
+  carousel.addEventListener('focusin', stopAutoPlay);
+  carousel.addEventListener('focusout', startAutoPlay);
+
+  // Touch / swipe support
+  carousel.addEventListener(
+    'touchstart',
+    (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+      stopAutoPlay();
+    },
+    { passive: true }
+  );
+
+  carousel.addEventListener(
+    'touchend',
+    (event) => {
+      touchEndX = event.changedTouches[0].screenX;
+
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance < 0) {
+          showSlide(currentIndex + 1);
+        } else {
+          showSlide(currentIndex - 1);
+        }
+      }
+
+      startAutoPlay();
+    },
+    { passive: true }
+  );
+
+  // Set initial state
+  showSlide(0);
+  startAutoPlay();
+});
