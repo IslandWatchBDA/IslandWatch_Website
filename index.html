@@ -37,7 +37,7 @@
   <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="images/iw-logo.webp?v=20260707" as="image" />
   <link rel="preload" href="images/hero-bg.webp?v=20260609" as="image" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=20260706b" />
+  <link rel="stylesheet" href="css/styles.css?v=20260920a" />
 
   <script type="application/ld+json">
   {
@@ -53,7 +53,7 @@
         "image": "https://www.islandwatch.bm/images/og-card.jpg",
         "description": "Bermuda-built vehicle tracking, alerting, and recovery service. Live GPS tracking, instant alerts, and one-tap police reporting for bikes, cars, and fleets.",
         "email": "info@islandwatch.bm",
-        "telephone": "#",
+        "telephone": "+1.441.777.SAFE(7233)",
         "areaServed": { "@type": "Country", "name": "Bermuda" },
         "address": {
           "@type": "PostalAddress",
@@ -83,9 +83,9 @@
           { "@type": "Question", "name": "Is this only for motorcycles?", "acceptedAnswer": { "@type": "Answer", "text": "No. We're starting with bikes, but the same platform works for cars, company vehicles, and other mobile assets." } },
           { "@type": "Question", "name": "Do you install the device?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our in-house Bermuda team handles a clean, tamper-resistant install — it takes about an hour." } },
           { "@type": "Question", "name": "What alerts will I receive?", "acceptedAnswer": { "@type": "Answer", "text": "Tamper and movement alerts when your vehicle is parked, plus geofence alerts and theft notifications sent straight to your phone." } },
-          { "@type": "Question", "name": "How does the Safe Driving Score work?", "acceptedAnswer": { "@type": "Answer", "text": "We turn real ride data — speeding, harsh acceleration, harsh braking, and collision detection — into one weekly score with plain-language trends." } },
+          { "@type": "Question", "name": "How does the Safe Driving Score work?", "acceptedAnswer": { "@type": "Answer", "text": "We turn real ride data — speeding, harsh acceleration, harsh braking, and collision detection — into one weekly, monthly or yearly score with plain-language trends." } },
           { "@type": "Question", "name": "Can parents use this for new riders starting at 16?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. It's built to help new riders build good habits, with insights that give parents peace of mind." } },
-          { "@type": "Question", "name": "What does the monthly plan include?", "acceptedAnswer": { "@type": "Answer", "text": "Live tracking and trip history, tamper and geofence alerts, the weekly Safe Driving Score, priority install, and direct support." } },
+          { "@type": "Question", "name": "What does the monthly plan include?", "acceptedAnswer": { "@type": "Answer", "text": "Live tracking and trip history, tamper and geofence alerts, the Safe Driving Score, priority install, and direct support." } },
           { "@type": "Question", "name": "Do you share my data with anyone?", "acceptedAnswer": { "@type": "Answer", "text": "Only when you choose to. Sharing a live-location link — including with the Bermuda Police Service during a theft — is always initiated by you." } },
           { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Personal is $25 a month plus a one-time $275 setup, with the device and install included. Fleet pricing is custom — book a consultation and we'll tailor it to your vehicles." } },
           { "@type": "Question", "name": "What happens if my vehicle is stolen?", "acceptedAnswer": { "@type": "Answer", "text": "You confirm the theft in the app and it goes straight to the Bermuda Police Service portal. They receive a secure link to your vehicle's live location while the case is open — you can revoke that access at any time, and it closes automatically once the case is resolved." } },
@@ -149,7 +149,7 @@
       <div class="hero__inner">
         <p class="pill pill--dark"><span class="dot" aria-hidden="true"></span> Built in Bermuda &nbsp;•&nbsp; Pilot launching soon</p>
         <h1 id="hero-title" class="hero__title">Protecting What Moves Bermuda.</h1>
-        <p class="hero__sub">Live GPS tracking, instant alerts, one-tap police reporting — for bikes, cars, and fleets. Move Smarter with IslandWatch.</p>
+        <p class="hero__sub">Live GPS tracking, instant alerts, one-tap police reporting (coming soon) — for bikes, cars, and fleets. Move Smarter with IslandWatch.</p>
         <div class="hero__cta">
           <a class="btn btn-primary btn-lg" href="#waitlist">Join the Waitlist <span class="ms" aria-hidden="true">arrow_forward</span></a>
           <a class="btn btn-glass btn-lg" href="#how-it-works"><span class="ms" aria-hidden="true">play_circle</span> Watch Demo</a>
@@ -166,11 +166,11 @@
           <span class="hero__avail">Available on iOS &amp; Android</span>
         </div>
         <p class="hero__contact">
-          <a href="#"><span class="ms" aria-hidden="true">call</span> Call</a>
+          <a href="tel:+14417777233"><span class="ms" aria-hidden="true">call</span> Call</a>
           <span class="sep" aria-hidden="true">·</span>
-          <a href="#"><span class="ms" aria-hidden="true">chat</span> WhatsApp</a>
+          <a href="https://wa.me/14417777233" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">chat</span> WhatsApp</a>
           <span class="sep" aria-hidden="true">·</span>
-          <a href="mailto:info@islandwatch.bm"><span class="ms" aria-hidden="true">mail</span> Enquire</a>
+          <a href="mailto:IslandWatch%20%3Cinfo@islandwatch.bm%3E?subject=Website%20Enquiry"><span class="ms" aria-hidden="true">mail</span> Enquire</a>
         </p>
       </div>
       </div>
@@ -219,23 +219,31 @@
       </div>
       <div class="container grid grid-4">
         <article class="card">
-          <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">my_location</span></span>
-          <h3>Always on</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">my_location</span></span>
+            <h3>Always on</h3>
+          </div>
           <p>See your vehicle’s live location whenever you need it.</p>
         </article>
         <article class="card">
-          <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">speed</span></span>
-          <h3>On the move</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">speed</span></span>
+            <h3>On the move</h3>
+          </div>
           <p>Smooth, real-time updates while your vehicle is on the road.</p>
         </article>
         <article class="card">
-          <span class="icon-tile icon-tile--navy"><span class="ms" aria-hidden="true">notifications_active</span></span>
-          <h3>Instant alerts</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--navy"><span class="ms" aria-hidden="true">notifications_active</span></span>
+            <h3>Instant alerts</h3>
+          </div>
           <p>Tamper and movement notifications sent straight to your phone.</p>
         </article>
         <article class="card">
-          <span class="icon-tile icon-tile--teal2"><span class="ms" aria-hidden="true">share_location</span></span>
-          <h3>Quick action</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--teal2"><span class="ms" aria-hidden="true">share_location</span></span>
+            <h3>Quick action</h3>
+          </div>
           <p>Share a secure live-location link the moment it matters.</p>
         </article>
       </div>
@@ -244,23 +252,83 @@
         <div class="score-block">
           <div class="score-block__copy">
             <p class="pill pill--green"><span class="ms" aria-hidden="true">shield</span> Safe Driving Score</p>
-            <h3 class="score-block__title">A weekly score<br />that actually helps<br />you get better.</h3>
+            <h3 class="score-block__title">A score<br />that actually helps<br />you get better.</h3>
             <p class="score-block__desc">Clear trends, plain feedback. Built for our roads — especially helpful for new riders finding their way.</p>
             <ul class="chips">
               <li>Speeding</li><li>Harsh Acceleration</li><li>Harsh Braking</li><li>Collision Detection</li>
             </ul>
           </div>
-          <div class="score-card" role="img" aria-label="Safe Driving Score this week: 8.7 out of 10, up 0.6, smoother than last week.">
-            <div class="score-card__row">
-              <span class="score-card__label">This week</span>
-              <span class="trend"><span class="ms" aria-hidden="true">trending_up</span> +0.6</span>
-            </div>
-            <p class="score-card__big"><strong>8.7</strong> <span>/ 10</span></p>
-            <p class="score-card__note">Smoother than last week</p>
-            <div class="bars" aria-hidden="true">
-              <span style="height:48%"></span><span style="height:67%"></span><span style="height:58%"></span><span style="height:73%"></span><span style="height:81%"></span><span style="height:90%"></span><span style="height:100%"></span>
-            </div>
-          </div>
+<div class="score-carousel" aria-label="Safe Driving Score screens">
+  <div class="score-carousel__viewport">
+    <div class="score-carousel__track">
+
+      <div class="score-carousel__slide">
+        <img
+          src="images/score-card1.webp"
+          width="1080"
+          height="1950"
+          loading="lazy"
+          decoding="async"
+          alt="Safe Driving Score screen showing this week's driving score."
+        />
+      </div>
+
+      <div class="score-carousel__slide">
+        <img
+          src="images/score-card2.webp"
+          width="1080"
+          height="1950"
+          loading="lazy"
+          decoding="async"
+          alt="Safe Driving Score screen showing driving insights."
+        />
+      </div>
+
+      <div class="score-carousel__slide">
+        <img
+          src="images/score-card3.webp"
+          width="1080"
+          height="1950"
+          loading="lazy"
+          decoding="async"
+          alt="Safe Driving Score screen showing driving trends."
+        />
+      </div>
+
+      <div class="score-carousel__slide">
+        <img
+          src="images/score-card4.webp"
+          width="1080"
+          height="1950"
+          loading="lazy"
+          decoding="async"
+          alt="Safe Driving Score screen showing driving events."
+        />
+      </div>
+
+      <div class="score-carousel__slide">
+        <img
+          src="images/score-card5.webp"
+          width="1080"
+          height="1950"
+          loading="lazy"
+          decoding="async"
+          alt="Safe Driving Score screen showing weekly, monthly or yearly driving performance."
+        />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="score-carousel__dots" aria-label="Choose a Safe Driving Score screen">
+    <button class="score-carousel__dot is-active" type="button" aria-label="Show screen 1" aria-current="true"></button>
+    <button class="score-carousel__dot" type="button" aria-label="Show screen 2"></button>
+    <button class="score-carousel__dot" type="button" aria-label="Show screen 3"></button>
+    <button class="score-carousel__dot" type="button" aria-label="Show screen 4"></button>
+    <button class="score-carousel__dot" type="button" aria-label="Show screen 5"></button>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
@@ -362,7 +430,7 @@
           <li class="step"><div class="step__top"><span class="step__num">02</span><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">event_available</span></span></div><h3>Book a time</h3><p>We book an install time that works for you.</p></li>
           <li class="step"><div class="step__top"><span class="step__num">03</span><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">handyman</span></span></div><h3>Quick install</h3><p>In-house team. Clean setup. About one hour.</p></li>
           <li class="step"><div class="step__top"><span class="step__num">04</span><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">settings</span></span></div><h3>Activate the app</h3><p>Pair your device and dial in your alerts.</p></li>
-          <li class="step"><div class="step__top"><span class="step__num">05</span><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">rocket_launch</span></span></div><h3>Move smarter</h3><p>Live tracking, alerts, and your daily, weekly, monthly and yearly score.</p></li>
+          <li class="step"><div class="step__top"><span class="step__num">05</span><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">rocket_launch</span></span></div><h3>Move smarter</h3><p>Live tracking, alerts, and your daily, weekly, monthly or yearly score.</p></li>
         </ol>
       </div>
     </section>
@@ -371,7 +439,7 @@
     <section class="section section--alt section--split" id="police" aria-labelledby="police-title">
       <div class="container split">
         <div class="split__copy">
-          <p class="pill pill--green-soft"><span class="ms" aria-hidden="true">local_police</span> Police Collaboration</p>
+          <p class="pill pill--green-soft"><span class="ms" aria-hidden="true">local_police</span> Police Collaboration (coming soon)</p>
           <h2 id="police-title" class="section__title section__title--left">If it gets stolen,<br />you are not alone.</h2>
           <p class="section__sub section__sub--left">Report a theft directly to the secure Bermuda Police Service portal. Stay in the loop with real-time status updates as the case progresses.</p>
           <ol class="timeline">
@@ -381,9 +449,9 @@
             <li><span class="icon-tile icon-tile--pink-soft sm"><span class="ms" aria-hidden="true">shield</span></span><div><h3>You stay in control</h3><p>Police see your vehicle only while a case is open. You can revoke access at any time, and the connection closes automatically the moment the case is resolved.</p></div></li>
           </ol>
         </div>
-        <div class="split__media">
-          <img src="images/police-report.webp" width="436" height="425" loading="lazy" decoding="async" alt="IslandWatch theft report screen showing the device details and shared live location." />
-        </div>
+            <div class="split__media">
+              <img class="split__media--police" src="images/police-report.webp" width="436" height="425" loading="lazy" decoding="async" alt="IslandWatch theft report screen showing the device details and shared live location." />
+            </div>
       </div>
     </section>
 
@@ -397,23 +465,33 @@
           <a class="btn btn-navy" href="#waitlist">Book a Consultation <span class="ms" aria-hidden="true">arrow_forward</span></a>
         </div>
         <div class="split__media">
-          <img src="images/fleet-dash.webp" width="496" height="316" loading="lazy" decoding="async" alt="IslandWatch Fleet dashboard showing live vehicle counts: active, parked, offline, and alerting." />
+          <img class="split__media--fleet" src="images/fleet-dash.webp" width="496" height="316" loading="lazy" decoding="async" alt="IslandWatch Fleet dashboard showing live vehicle counts: active, parked, offline, and alerting." />
         </div>
       </div>
 
       <div class="container fleet-grid">
         <article class="card card--feature">
           <div class="card__top">
-            <span class="icon-tile icon-tile--gradient"><span class="ms" aria-hidden="true">fence</span></span>
-            <span class="pill pill--green-soft sm"><span class="dot dot--green" aria-hidden="true"></span> Live zones</span>
+            <div class="card__top-left">
+              <span class="icon-tile icon-tile--gradient">
+                <span class="ms" aria-hidden="true">fence</span>
+              </span>
+              <h3 class="inline">Geofences</h3>
+            </div>
+            <span class="pill pill--green-soft sm">
+              <span class="dot dot--green" aria-hidden="true"></span> Live zones
+            </span>
           </div>
-          <h3>Geofences</h3>
+          
           <p>Get alerted the moment a vehicle enters or leaves a depot, worksite, or restricted zone.</p>
-          <div class="mini-map" aria-hidden="true">
-            <span class="mini-map__tag">Depot zone</span>
-            <span class="mini-map__ring"></span>
-            <span class="mini-map__pin mini-map__pin--green"><span class="ms" aria-hidden="true">local_shipping</span></span>
-            <span class="mini-map__pin mini-map__pin--pink"><span class="ms" aria-hidden="true">local_shipping</span></span>
+          <div class="geofence-image">
+            <img
+              src="images/geofence-image.webp"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+              alt="IslandWatch geofence dashboard showing vehicles entering and leaving a designated depot zone."/>
           </div>
         </article>
 
@@ -421,7 +499,7 @@
           <article class="card card--row">
             <div>
               <div class="card__top"><span class="icon-tile icon-tile--gradient sm"><span class="ms" aria-hidden="true">speed</span></span><h3 class="inline">Driver scoring</h3></div>
-              <p>A weekly safety score per driver — coach in plain language, not spreadsheets.</p>
+              <p>A safety score per driver — coach in plain language, not spreadsheets.</p>
             </div>
             <div class="score-mini">
               <strong>9.1</strong>
@@ -430,8 +508,25 @@
             </div>
           </article>
           <div class="fleet-grid__pair">
-            <article class="card"><span class="icon-tile icon-tile--gradient"><span class="ms" aria-hidden="true">dashboard</span></span><h3>Dashboards</h3><p>Your whole fleet at a glance. Filter by depot, vehicle, or driver.</p></article>
-            <article class="card"><span class="icon-tile icon-tile--gradient"><span class="ms" aria-hidden="true">history</span></span><h3>Trip history</h3><p>Every route, stop, and detour — searchable across the pilot.</p></article>
+            <article class="card">
+              <div class="card__top-left">
+                <span class="icon-tile icon-tile--gradient">
+                  <span class="ms" aria-hidden="true">dashboard</span>
+                </span>
+                <h3 class="inline">Dashboards</h3>
+              </div>
+              <p>Your whole fleet at a glance. Filter by depot, vehicle, or driver.</p>
+            </article>
+
+            <article class="card">
+              <div class="card__top-left">
+                <span class="icon-tile icon-tile--gradient">
+                  <span class="ms" aria-hidden="true">history</span>
+                </span>
+                <h3 class="inline">Trip history</h3>
+              </div>
+              <p>Every route, stop, and detour — searchable across the pilot.</p>
+            </article>
           </div>
         </div>
       </div>
@@ -445,10 +540,10 @@
       </div>
       <div class="container grid grid-3">
         <article class="phase">
-          <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">transportation</span></span>
+          <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">two_wheeler</span></span>
           <p class="phase__stage phase__stage--pilot">PILOT</p>
           <h3>Vehicle protection</h3>
-          <p>Theft and tamper alerts, live tracking, one-tap police reporting, and a weekly Safe Driving Score — for bikes, cars, and any vehicle.</p>
+          <p>Theft and tamper alerts, live tracking, one-tap police reporting, and a Safe Driving Score — for bikes, cars, and any vehicle.</p>
         </article>
         <article class="phase">
           <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">local_shipping</span></span>
@@ -521,7 +616,7 @@
           <ul class="checklist">
             <li><span class="ms check" aria-hidden="true">check</span> Live tracking and trip history</li>
             <li><span class="ms check" aria-hidden="true">check</span> Tamper, movement, and geofence alerts</li>
-            <li><span class="ms check" aria-hidden="true">check</span> Weekly Safe Driving Score</li>
+            <li><span class="ms check" aria-hidden="true">check</span> Safe Driving Score</li>
             <li><span class="ms check" aria-hidden="true">check</span> Direct reporting to Bermuda Police Service</li>
             <li><span class="ms check" aria-hidden="true">check</span> In-house install and ongoing support</li>
           </ul>
@@ -563,8 +658,8 @@
           <span class="icon-tile icon-tile--pink round"><span class="ms" aria-hidden="true">help</span></span>
           <h3>Still have questions?</h3>
           <p>We’re a small Bermuda team and happy to help. Send us a note and we’ll get back to you fast.</p>
-          <a class="btn btn-primary btn-block" href="mailto:info@islandwatch.bm">Contact the team</a>
-          <a class="btn btn-outline-teal btn-block" href="#"><span class="ms" aria-hidden="true">chat</span> WhatsApp us</a>
+          <a class="btn btn-primary btn-block" href="mailto:IslandWatch%20%3Cinfo@islandwatch.bm%3E?subject=Website%20Enquiry">Contact the team</a>
+          <a class="btn btn-outline-teal btn-block" href="https://wa.me/14417777233" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">chat</span> WhatsApp us</a>
         </aside>
 
         <div class="faq__list">
@@ -586,7 +681,7 @@
           </details>
           <details class="faq__item">
             <summary>How does the Safe Driving Score work?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__answer"><p>We turn real ride data — speeding, harsh acceleration, harsh braking, and collision detection — into one weekly score with plain-language trends.</p></div>
+            <div class="faq__answer"><p>We turn real ride data — speeding, harsh acceleration, harsh braking, and collision detection — into one weekly, monthly or yearly score with plain-language trends.</p></div>
           </details>
           <details class="faq__item">
             <summary>Can parents use this for new riders starting at 16?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -594,7 +689,7 @@
           </details>
           <details class="faq__item">
             <summary>What does the monthly plan include?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__answer"><p>Live tracking and trip history, tamper and geofence alerts, the weekly Safe Driving Score, priority install, and direct support.</p></div>
+            <div class="faq__answer"><p>Live tracking and trip history, tamper and geofence alerts, the Safe Driving Score, priority install, and direct support.</p></div>
           </details>
           <details class="faq__item">
             <summary>Do you share my data with anyone?<span class="faq__icon" aria-hidden="true"></span></summary>
@@ -633,8 +728,8 @@
         <h2 id="waitlist-title" class="section__title">Join the waitlist.</h2>
         <p class="section__sub">Pick the form that fits — Personal for up to 3 vehicles, Fleet for businesses with multiple vehicles.</p>
         <div class="quick-actions">
-          <a class="btn btn-ghost" href="#"><span class="ms" aria-hidden="true">call</span> Call us</a>
-          <a class="btn btn-teal" href="#"><span class="ms" aria-hidden="true">chat</span> WhatsApp us</a>
+          <a class="btn btn-ghost" href="tel:+14417777233"><span class="ms" aria-hidden="true">call</span> Call us</a>
+          <a class="btn btn-teal" href="https://wa.me/14417777233" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">chat</span> WhatsApp us</a>
         </div>
       </div>
 
@@ -711,7 +806,7 @@
       <div class="footer-brand">
         <a class="footer-logo" href="#top" aria-label="IslandWatch home"><img src="images/iw-logo.webp?v=20260707" alt="" width="88" height="88" loading="lazy" decoding="async" /></a>
         <p>Built in Bermuda. Theft protection now, smarter insights for every vehicle that moves.</p>
-        <a class="footer-pill" href="mailto:info@islandwatch.bm"><span class="ms" aria-hidden="true">mail</span> <span class="footer-pill__email">info@islandwatch.bm</span></a>
+        <a class="footer-pill" href="mailto:IslandWatch%20%3Cinfo@islandwatch.bm%3E?subject=Website%20Enquiry"><span class="ms" aria-hidden="true">mail</span> <span class="footer-pill__email">info@islandwatch.bm</span></a>
         <p class="footer-loc"><span class="ms" aria-hidden="true">location_on</span> Hamilton, Bermuda</p>
       </div>
       <nav class="footer-col" aria-label="Product">
@@ -754,6 +849,6 @@
   </footer>
 
   <!-- Demo video popup -->
-  <script src="js/main.js?v=20260618l"></script>
+  <script src="js/main.js?v=20260920a"></script>
 </body>
 </html>
