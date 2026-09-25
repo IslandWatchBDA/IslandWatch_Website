@@ -470,6 +470,15 @@ button{font-family:inherit;}
 .mini-map__pin--green{background:var(--green); right:62px; top:54px;}
 .mini-map__pin--pink{background:var(--pink); left:90px; bottom:30px;}
 
+.card--num .card__top{gap:12px;}
+#why .card--num h3{line-height:1.2;}
+#before-you-ask .card h3{line-height:1.2;}
+@media (max-width:400px){
+  #why .card--num{padding:24px;}
+  #why .card--num h3{font-size:19px;}
+  #why .card--num .card__num{font-size:34px;}
+}
+
 /* ---------- Roadmap phases ---------- */
 .phase{background:var(--ink); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:14px; align-items:flex-start;}
 .phase h3{color:#fff; font-size:20px; font-weight:700;}
@@ -478,6 +487,15 @@ button{font-family:inherit;}
 .phase__stage--pilot{color:#F9A8C4;}
 .phase__stage--next{color:var(--mint);}
 .phase__stage--later{color:#7DD3FC;}
+@media (min-width:768px) and (max-width:1024px){
+  #roadmap .grid-3, #why .grid-3{grid-template-columns:repeat(2,1fr);} /* 2 up, 3rd card below */
+}
+@media (max-width:767px){
+  #roadmap .grid-3, #why .grid-3{grid-template-columns:1fr;} /* one card per row */
+}
+@media (max-width:480px){
+  #roadmap .phase h3{font-size:16px;}
+}
 
 /* ---------- Before you ask ---------- */
 .bya-title{display:flex; align-items:center; gap:10px; color:var(--navy); font-size:28px; font-weight:700; margin-bottom:24px;}
