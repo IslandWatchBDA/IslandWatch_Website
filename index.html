@@ -37,7 +37,7 @@
   <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="images/iw-logo.webp?v=20260707" as="image" />
   <link rel="preload" href="images/hero-bg.webp?v=20260609" as="image" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=20260920a" />
+  <link rel="stylesheet" href="css/styles.css?v=20260925j" />
 
   <script type="application/ld+json">
   {
@@ -185,26 +185,32 @@
       <div class="container grid grid-3">
         <article class="card card--num">
           <div class="card__top">
-            <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">lock</span></span>
+            <div class="card__top-left">
+              <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">lock</span></span>
+              <h3>Theft comes first</h3>
+            </div>
             <span class="card__num">01</span>
           </div>
-          <h3>Theft comes first</h3>
           <p>Know when something is wrong, see where your vehicle is, and act fast with a clear theft-to-recovery flow.</p>
         </article>
         <article class="card card--num">
           <div class="card__top">
-            <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">speed</span></span>
+            <div class="card__top-left">
+              <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">speed</span></span>
+              <h3>Safer drivers</h3>
+            </div>
             <span class="card__num card__num--teal">02</span>
           </div>
-          <h3>Safer drivers</h3>
           <p>Turn how you ride into clear insights — especially helpful for new riders starting at 16.</p>
         </article>
         <article class="card card--num">
           <div class="card__top">
-            <span class="icon-tile icon-tile--navy"><span class="ms" aria-hidden="true">inventory_2</span></span>
+            <div class="card__top-left">
+              <span class="icon-tile icon-tile--navy"><span class="ms" aria-hidden="true">inventory_2</span></span>
+              <h3>Smarter businesses</h3>
+            </div>
             <span class="card__num card__num--navy">03</span>
           </div>
-          <h3>Smarter businesses</h3>
           <p>Live visibility, route history, and accountability for your fleet — minus the admin.</p>
         </article>
       </div>
@@ -540,21 +546,33 @@
       </div>
       <div class="container grid grid-3">
         <article class="phase">
-          <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">two_wheeler</span></span>
-          <p class="phase__stage phase__stage--pilot">PILOT</p>
-          <h3>Vehicle protection</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--pink"><span class="ms" aria-hidden="true">two_wheeler</span></span>
+            <div>
+              <p class="phase__stage phase__stage--pilot">PILOT</p>
+              <h3>Vehicle protection</h3>
+            </div>
+          </div>
           <p>Theft and tamper alerts, live tracking, one-tap police reporting, and a Safe Driving Score — for bikes, cars, and any vehicle.</p>
         </article>
         <article class="phase">
-          <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">local_shipping</span></span>
-          <p class="phase__stage phase__stage--next">NEXT</p>
-          <h3>IslandWatch Fleet</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--teal"><span class="ms" aria-hidden="true">local_shipping</span></span>
+            <div>
+              <p class="phase__stage phase__stage--next">NEXT</p>
+              <h3>IslandWatch Fleet</h3>
+            </div>
+          </div>
           <p>A multi-vehicle dashboard for businesses — geofences, trip history, and per-driver scoring.</p>
         </article>
         <article class="phase">
-          <span class="icon-tile icon-tile--cyan"><span class="ms" aria-hidden="true">explore</span></span>
-          <p class="phase__stage phase__stage--later">LATER</p>
-          <h3>Beyond the road</h3>
+          <div class="card__top-left">
+            <span class="icon-tile icon-tile--cyan"><span class="ms" aria-hidden="true">explore</span></span>
+            <div>
+              <p class="phase__stage phase__stage--later">LATER</p>
+              <h3>Beyond the road</h3>
+            </div>
+          </div>
           <p>Marine, equipment, and anything else worth tracking around the island.</p>
         </article>
       </div>
@@ -565,9 +583,9 @@
       <div class="container">
         <h2 id="bya-title" class="bya-title"><span class="ms" aria-hidden="true">flash_on</span> Before you ask</h2>
         <div class="grid grid-3">
-          <article class="card card--soft"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">security</span></span><h3>Is my data private?</h3><p>Yes. Your data is used only to provide the service. Any sharing — like a live-location link — is initiated by you.</p></article>
-          <article class="card card--soft"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">build</span></span><h3>Can the device be removed?</h3><p>Removal triggers a tamper alert instantly. Installs are in-house and tamper-resistant by design.</p></article>
-          <article class="card card--soft"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">sell</span></span><h3>How much does it cost?</h3><p>Pilot pricing is locked in. Device and install pricing is confirmed during onboarding.</p></article>
+          <article class="card card--soft"><div class="card__top-left"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">security</span></span><h3>Is my data private?</h3></div><p>Yes. Your data is used only to provide the service. Any sharing — like a live-location link — is initiated by you.</p></article>
+          <article class="card card--soft"><div class="card__top-left"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">build</span></span><h3>Can the device be removed?</h3></div><p>Removal triggers a tamper alert instantly. Installs are in-house and tamper-resistant by design.</p></article>
+          <article class="card card--soft"><div class="card__top-left"><span class="icon-tile icon-tile--pink-soft"><span class="ms" aria-hidden="true">sell</span></span><h3>How much does it cost?</h3></div><p>Pilot pricing is locked in. Device and install pricing is confirmed during onboarding.</p></article>
         </div>
       </div>
     </section>
