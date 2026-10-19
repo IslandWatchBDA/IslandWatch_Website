@@ -458,6 +458,8 @@ button{font-family:inherit;}
 .demo__play:hover{transform:translate(-50%,-50%) scale(1.06);}
 /* How-It-Works explainer video (replaces the old static demo placeholder) */
 .demo-video{max-width:880px; margin:0 auto 56px;}
+.demo-video--portrait{max-width:360px;}
+.demo-video--portrait .demo-video__player{aspect-ratio:9 / 16; height:auto; width:100%; object-fit:cover; background:var(--ink);}
 .demo-video__player{width:100%; aspect-ratio:16 / 9; display:block; border-radius:var(--radius); background:var(--ink); box-shadow:var(--shadow-lg);}
 /* Logo placeholder — replaces the former demo video */
 .demo-placeholder{display:grid; place-items:center; width:100%; aspect-ratio:16 / 9;
