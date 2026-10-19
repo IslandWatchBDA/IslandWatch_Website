@@ -244,6 +244,8 @@ button{font-family:inherit;}
 .hero__badges{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:8px;}
 .store-badge{display:flex; flex-direction:column; background:#000; border:1px solid rgba(255,255,255,.25); border-radius:10px; padding:8px 14px; color:#fff;}
 .store-badge:hover{background:#111;}
+.store-badge--soon{opacity:.55; cursor:default;}
+.store-badge--soon:hover{background:#000;}
 .store-badge__small{font-size:9px;}
 .store-badge__big{font-size:15px; font-weight:700;}
 .hero__avail{font-size:12px; color:#CBD5E1;}
@@ -659,7 +661,7 @@ button{font-family:inherit;}
 .bya-title .ms{color:var(--pink); font-size:26px;}
 
 /* ---------- Pricing ---------- */
-.pricing{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;}
+.pricing{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:stretch; max-width:860px; margin:0 auto;}
 .price-card{position:relative; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:40px; display:flex; flex-direction:column; gap:18px; box-shadow:var(--shadow-card); transition:transform .2s ease, box-shadow .25s ease, border-color .25s ease;}
 .price-card--pilot:hover{transform:translateY(-4px); border-color:var(--teal); box-shadow:0 0 0 1px var(--teal), 0 24px 60px -10px rgba(2,89,86,.26);}
 .price-card--fleet:hover{transform:translateY(-4px); border-color:var(--teal); box-shadow:0 0 0 1px var(--teal), 0 24px 60px -10px rgba(2,89,86,.26);}
