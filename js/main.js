@@ -474,11 +474,6 @@
     var form = document.querySelector('form[name="rider-waitlist"][data-api]');
     if (!form || !window.fetch || !window.JSON) return;
     var api = form.getAttribute("data-api");
-    // Testing on a laptop: talk to the local backend instead of production.
-    var host = window.location.hostname;
-    if (window.location.protocol === "file:" || host === "localhost" || host === "127.0.0.1") {
-      api = "http://localhost:3000/api/v1/public/apply/start";
-    }
     var fieldsBox = form.querySelector("[data-register-fields]");
     var done = form.querySelector("[data-register-done]");
     var alertBox = form.querySelector("[data-register-alert]");
