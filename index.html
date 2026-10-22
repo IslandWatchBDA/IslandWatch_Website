@@ -37,7 +37,7 @@
   <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="images/iw-logo.webp?v=20260707" as="image" />
   <link rel="preload" href="images/hero-bg.webp?v=20260609" as="image" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=20261019a" />
+  <link rel="stylesheet" href="css/styles.css?v=20261022a" />
 
   <script type="application/ld+json">
   {
@@ -741,37 +741,43 @@
       </div>
 
       <div class="container forms">
-        <form class="form-card" name="rider-waitlist" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="rider-form-title">
+        <!-- Register online. JS (setupRegister in js/main.js) sends this to our API, which
+             emails the customer their sign-up link. Without JS, or if the API is down, the
+             form posts to Netlify as before and the office gets the email. -->
+        <form class="form-card" name="rider-waitlist" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="rider-form-title" data-api="https://api.islandwatch.bm/api/v1/public/apply/start">
           <input type="hidden" name="form-name" value="rider-waitlist" />
           <p hidden>
             <label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
           </p>
           <p class="pill pill--pink-soft"><span class="ms" aria-hidden="true">two_wheeler</span> For riders and drivers</p>
-          <h3 id="rider-form-title">Book your install</h3>
+          <h3 id="rider-form-title">Register online</h3>
           <p class="form-card__sub">Personal vehicles — bike, car, or both. Up to 4.</p>
-          <div class="field">
-            <label for="rider-name">Full name</label>
-            <input type="text" id="rider-name" name="name" placeholder="John Smith" autocomplete="name" required />
+          <div class="form-card__fields" data-register-fields>
+            <div class="field">
+              <label for="rider-name">Full name</label>
+              <input type="text" id="rider-name" name="name" placeholder="John Smith" autocomplete="name" maxlength="100" required />
+              <p class="field__error" id="rider-name-error"></p>
+            </div>
+            <div class="field">
+              <label for="rider-email">Email</label>
+              <input type="email" id="rider-email" name="email" placeholder="you@email.bm" autocomplete="email" maxlength="254" required />
+              <p class="field__error" id="rider-email-error"></p>
+            </div>
+            <div class="field">
+              <label for="rider-description">Anything we should know? (optional)</label>
+              <p class="field__hint" id="rider-description-hint">For example, how many vehicles or the best time to reach you. Up to 1000 characters.</p>
+              <textarea id="rider-description" name="description" rows="4" maxlength="1000" aria-describedby="rider-description-hint"></textarea>
+              <p class="field__error" id="rider-description-error"></p>
+            </div>
+            <p class="form-card__alert" role="alert" data-register-alert></p>
+            <button class="btn btn-primary" type="submit">Register <span class="ms" aria-hidden="true">arrow_forward</span></button>
+            <p class="sr-only" role="status" data-register-status></p>
+            <p class="form-card__note">We’ll email you a link to finish signing up. It takes about 5 minutes.</p>
           </div>
-          <div class="field">
-            <label for="rider-email">Email</label>
-            <input type="email" id="rider-email" name="email" placeholder="you@email.bm" autocomplete="email" required />
+          <div class="form-card__done" data-register-done hidden>
+            <h3 tabindex="-1">Check your email</h3>
+            <p>We’ve sent a link to <strong data-register-email></strong> to finish signing up. If it isn’t there in a few minutes, check your spam folder.</p>
           </div>
-          <div class="field">
-            <label for="rider-parish">Parish</label>
-            <select id="rider-parish" name="parish" required>
-              <option value="" selected>Select parish</option>
-              <option>Sandys</option><option>Southampton</option><option>Warwick</option>
-              <option>Paget</option><option>Pembroke</option><option>Devonshire</option>
-              <option>Smith's</option><option>Hamilton</option><option>St. George's</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="rider-bike">Vehicle (optional)</label>
-            <input type="text" id="rider-bike" name="bike" placeholder="e.g. Yamaha YBR 125, Honda Civic" />
-          </div>
-          <button class="btn btn-primary" type="submit">Get Started <span class="ms" aria-hidden="true">arrow_forward</span></button>
-          <p class="form-card__note">You’ll get a confirmation email and we’ll reach out to book your install.</p>
         </form>
 
         <form class="form-card" name="fleet-consultation" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="fleet-form-title">
@@ -856,6 +862,6 @@
   </footer>
 
   <!-- Demo video popup -->
-  <script src="js/main.js?v=20260920a"></script>
+  <script src="js/main.js?v=20261022c"></script>
 </body>
 </html>

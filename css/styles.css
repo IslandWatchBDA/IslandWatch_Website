@@ -723,14 +723,31 @@ button{font-family:inherit;}
 .form-card__sub{color:var(--body); font-size:14px;}
 .field{display:flex; flex-direction:column; gap:6px; margin-top:6px;}
 .field label{color:var(--navy); font-size:12px; font-weight:700;}
-.field input,.field select{
+.field input,.field select,.field textarea{
   width:100%; height:46px; padding:0 14px; border:1px solid var(--border); border-radius:10px;
   background:var(--bg-alt); color:var(--body-2); font-size:14px; font-family:inherit;
 }
-.field input::placeholder{color:#9aa3b0;}
-.field input:focus,.field select:focus{outline:2px solid var(--pink-dark); outline-offset:1px; border-color:var(--pink-dark); box-shadow:0 0 0 3px rgba(233,30,99,.15);}
+.field textarea{height:auto; min-height:96px; padding:12px 14px; line-height:1.5; resize:vertical;}
+.field input::placeholder{color:#6B7280;} /* 4.6:1 on --bg-alt; #9aa3b0 was 2.5:1 */
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--pink-dark); outline-offset:1px; border-color:var(--pink-dark); box-shadow:0 0 0 3px rgba(233,30,99,.15);}
 .form-card .btn{margin-top:10px; align-self:flex-start; padding:16px 24px; gap:10px;}
 .form-card__note{color:var(--body-2); font-size:12px;}
+
+/* Register card (setupRegister in js/main.js). Error red #B91C1C is 6.5:1 on white. */
+.form-card__fields{display:flex; flex-direction:column; gap:14px;}
+.form-card__fields[hidden],.form-card__done[hidden]{display:none;}
+.field__hint{color:var(--body); font-size:12px;}
+.field__error{color:#B91C1C; font-size:12px; font-weight:600;}
+.field__error:empty{display:none;}
+.field [aria-invalid="true"]{border-color:#B91C1C;}
+/* Kept in the layout while empty (no display:none) so role="alert" stays reliable. */
+.form-card__alert{color:#B91C1C; font-size:14px; font-weight:600;}
+.form-card__alert:empty{position:absolute; width:1px; height:1px; overflow:hidden;}
+/* No opacity: it would drop the white label below 4.5:1 on the pink button. */
+.form-card__fields .btn[aria-disabled="true"]{cursor:progress; transform:none;}
+.form-card__done{display:flex; flex-direction:column; gap:10px; color:var(--body-2); font-size:15px; line-height:1.5;}
+.form-card__done h3{color:var(--navy); font-size:24px; font-weight:700;}
+.form-card__done strong{color:var(--navy); overflow-wrap:anywhere;}
 
 /* ---------- Footer ---------- */
 .site-footer{background:#040F3F; color:#fff;}

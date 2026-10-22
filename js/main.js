@@ -459,6 +459,171 @@
       else if (!inSlider && e.key === "ArrowLeft") { e.preventDefault(); video.currentTime = Math.max(0, video.currentTime - 5); }
     });
   })();
+
+  /* ---------- Register card (Personal, "Get IslandWatch.") ----------
+     Sends name, email and description to our API, which emails the customer their
+     sign-up link. Progressive enhancement: without JS, or when the API is switched off
+     (404), down, or slow, the form posts to Netlify as it always has, so the office
+     still gets the lead.
+     Accessibility: each error sits under its field (aria-describedby + aria-invalid)
+     and focus goes to the first bad field. The button uses aria-disabled while sending,
+     not disabled, so focus isn't dropped. On success the fields are hidden and focus
+     moves to the "Check your email" heading. Form-level messages go into a role="alert"
+     that is in the page from the start. */
+  (function setupRegister() {
+    var form = document.querySelector('form[name="rider-waitlist"][data-api]');
+    if (!form || !window.fetch || !window.JSON) return;
+    var api = form.getAttribute("data-api");
+    var fieldsBox = form.querySelector("[data-register-fields]");
+    var done = form.querySelector("[data-register-done]");
+    var alertBox = form.querySelector("[data-register-alert]");
+    var statusBox = form.querySelector("[data-register-status]");
+    var button = fieldsBox && fieldsBox.querySelector('button[type="submit"]');
+    if (!api || !fieldsBox || !done || !alertBox || !button) return;
+
+    var FIELDS = {
+      name: form.querySelector("#rider-name"),
+      email: form.querySelector("#rider-email"),
+      description: form.querySelector("#rider-description")
+    };
+    var ORDER = ["name", "email", "description"];
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var buttonHtml = button.innerHTML;
+    var sending = false, tried = false, alertTimer = null;
+
+    // Only with JS: without it the browser's own `required` checks still apply.
+    form.setAttribute("novalidate", "");
+
+    function describedBy(input, id, on) {
+      var ids = (input.getAttribute("aria-describedby") || "").split(/\s+/).filter(function (x) { return x && x !== id; });
+      if (on) ids.push(id);
+      if (ids.length) input.setAttribute("aria-describedby", ids.join(" "));
+      else input.removeAttribute("aria-describedby");
+    }
+
+    function setError(key, message) {
+      var input = FIELDS[key];
+      var errId = input.id + "-error";
+      var err = document.getElementById(errId);
+      if (err) err.textContent = message || "";
+      if (message) { input.setAttribute("aria-invalid", "true"); describedBy(input, errId, true); }
+      else { input.removeAttribute("aria-invalid"); describedBy(input, errId, false); }
+    }
+
+    function check() {
+      var errors = {};
+      var name = FIELDS.name.value.trim();
+      var email = FIELDS.email.value.trim();
+      if (!name) errors.name = "Enter your full name.";
+      if (!email) errors.email = "Enter your email address.";
+      else if (!EMAIL_RE.test(email)) errors.email = "Enter an email address like name@example.com.";
+      if (FIELDS.description.value.trim().length > 1000) errors.description = "Keep this to 1000 characters or fewer.";
+      return errors;
+    }
+
+    function show(errors) {
+      ORDER.forEach(function (k) { setError(k, errors[k]); });
+      for (var i = 0; i < ORDER.length; i++) {
+        if (errors[ORDER[i]]) return FIELDS[ORDER[i]];
+      }
+      return null;
+    }
+
+    // Clear, then set a moment later, so the same message is announced again.
+    function say(message) {
+      clearTimeout(alertTimer);
+      alertBox.textContent = "";
+      if (message) alertTimer = setTimeout(function () { alertBox.textContent = message; }, 100);
+    }
+
+    function setSending(on) {
+      sending = on;
+      if (on) { button.setAttribute("aria-disabled", "true"); button.textContent = "Sending…"; }
+      else { button.removeAttribute("aria-disabled"); button.innerHTML = buttonHtml; }
+      // A label change on the focused button isn't read out, so say it here too.
+      if (statusBox) statusBox.textContent = on ? "Sending…" : "";
+    }
+
+    // The old way: a normal post to Netlify (thanks page). submit() skips this handler.
+    function fallback() {
+      setSending(false);
+      form.submit();
+    }
+
+    function succeed(email) {
+      form.querySelector("[data-register-email]").textContent = email;
+      fieldsBox.hidden = true;
+      done.hidden = false;
+      done.querySelector("h3").focus();
+    }
+
+    // After the first try, errors clear (or update) as the customer types.
+    ORDER.forEach(function (k) {
+      FIELDS[k].addEventListener("input", function () {
+        if (tried) setError(k, check()[k]);
+      });
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (sending) return;
+      tried = true;
+      say("");
+      var bad = show(check());
+      if (bad) { bad.focus(); return; }
+
+      var bot = form.querySelector('input[name="bot-field"]');
+      var email = FIELDS.email.value.trim();
+      var body = {
+        name: FIELDS.name.value.trim(),
+        email: email,
+        description: FIELDS.description.value.trim(),
+        website: bot ? bot.value : ""
+      };
+
+      setSending(true);
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 15000);
+
+      fetch(api, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        signal: ctrl ? ctrl.signal : undefined
+      })
+        .then(function (res) {
+          return res.json()
+            .catch(function () { return {}; })
+            .then(function (data) { return { status: res.status, data: data || {} }; });
+        })
+        .then(function (r) {
+          clearTimeout(timer);
+          if (r.status >= 200 && r.status < 300) { setSending(false); succeed(email); return; }
+          if (r.status === 400 && r.data.errors) {
+            setSending(false);
+            var errors = {};
+            r.data.errors.forEach(function (x) {
+              if (x && FIELDS[x.field] && !errors[x.field]) errors[x.field] = x.message;
+            });
+            var first = show(errors);
+            if (first) first.focus();
+            else say(r.data.message || "Please check your details and try again.");
+            return;
+          }
+          if (r.status === 429) {
+            setSending(false);
+            say(r.data.message || "That's a few tries in a row. Please wait a little and try again.");
+            return;
+          }
+          // 404 (switched off), 5xx, anything else: don't lose the lead.
+          fallback();
+        })
+        .catch(function () {
+          clearTimeout(timer);
+          fallback();
+        });
+    });
+  })();
 })();
 
 /* ============================================================
